@@ -9,8 +9,32 @@ namespace CS3358_FA2023_A5P2
    // do breadth-first (level) traversal and print data
    void ShowAll_BF(PNode* pListHead, ostream& outs)
    {
-      // to be implemented (part of assignment)
-	  // (put at near top to facilitate printing and grading)
+       if (pListHead == 0)
+       {
+           return;
+       }
+       //Create queue q of CNode*
+       cnPtrQueue q;
+       CNode* cursor = 0;
+       while (pListHead != 0)
+       {
+           if (pListHead->data != 0)
+           {
+               q.push(pListHead->data);
+           }
+           pListHead = pListHead->link;
+       }
+       while (!q.empty())
+       {
+           cursor = q.front();
+           q.pop();
+           //Display cursor -> data
+
+           if (cursor->link != 0)
+           {
+               q.push(cursor->link);
+           }
+       }
    }
    
    void Destroy_cList(CNode*& cListHead)

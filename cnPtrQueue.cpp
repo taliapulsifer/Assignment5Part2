@@ -9,11 +9,7 @@ namespace CS3358_FA2023_A5P2
 
 	size_t cnPtrQueue::size() const
 	{
-		size_t counter;
-		//Traverse the queue and tally the number of
-		//elements found
-
-		return counter;
+		return numItems;
 
 	}
 

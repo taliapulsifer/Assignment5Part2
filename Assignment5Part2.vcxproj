@@ -135,6 +135,9 @@
     <ClInclude Include="cnPtrQueue.h" />
     <ClInclude Include="nodes_LLoLL.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="a5p2_test.in" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
