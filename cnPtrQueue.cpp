@@ -5,7 +5,7 @@ using namespace std;
 
 namespace CS3358_FA2023_A5P2
 {
-
+	cnPtrQueue::cnPtrQueue() : numItems(0){}
 
 	size_t cnPtrQueue::size() const
 	{
@@ -17,6 +17,7 @@ namespace CS3358_FA2023_A5P2
 	{
 		//Using stdStack function push
 		inStack.push(cnPtr);
+		++numItems;
 	}
 
 	void cnPtrQueue::pop()
@@ -37,6 +38,7 @@ namespace CS3358_FA2023_A5P2
 		}
 		//pop outstack
 		outStack.pop();
+		--numItems;
 	}
 
 	CNode* cnPtrQueue::front()
@@ -63,7 +65,7 @@ namespace CS3358_FA2023_A5P2
 	{
 		//Check to see if the size is 0.
 		//If it is, its empty
-		return size() == 0;
+		return (inStack.size() == 0 && outStack.size() == 0);
 	}
 
 }

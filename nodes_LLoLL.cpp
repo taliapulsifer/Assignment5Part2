@@ -14,8 +14,9 @@ namespace CS3358_FA2023_A5P2
            return;
        }
        //Create queue q of CNode*
-       cnPtrQueue q;
        CNode* cursor = 0;
+       cnPtrQueue q;
+       //Load queue
        while (pListHead != 0)
        {
            if (pListHead->data != 0)
@@ -29,6 +30,7 @@ namespace CS3358_FA2023_A5P2
            cursor = q.front();
            q.pop();
            //Display cursor -> data
+           cout << cursor->data << " ";
 
            if (cursor->link != 0)
            {
